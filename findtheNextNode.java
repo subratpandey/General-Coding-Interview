@@ -1,6 +1,5 @@
-
 public class Solution {
-	public TreeNode findNextLargest(TreeNode node) {
+	public TreeNode findNextNode(TreeNode node) {
 		if(node == null) return null;
 		if(node.right != null) {
 			node = node.right;
