@@ -1,4 +1,3 @@
-
 public class Solution {
 	public TreeNode findLca(TreeNode node, int t1, int t2) {
 		if(node == null) return null;
@@ -9,6 +8,6 @@ public class Solution {
 		} else {
 			return node;
 		}
-	}
+	} 
 
 }
