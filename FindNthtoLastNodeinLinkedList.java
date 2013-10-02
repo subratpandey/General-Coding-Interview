@@ -1,4 +1,8 @@
-
+/**
+ * find the nth node to the last in a singly linked list
+ * 
+ **/
+ 
 public class Solution {
 	public ListNode nthToLast(ListNode head, int n) {
 		if(head == null || n < 1) return null;
