@@ -13,9 +13,10 @@ import java.util.*;
   public static Point[] closestk(Point  myList[], int k ) {
       PriorityQueue<Point> heap = new PriorityQueue<Point>(k, new Comparator<Point>() {
 					public int compare(Point a, Point b) {
-                        int re = (int)(b.x * b.x + b.y * b.y) - (a.x * a.x + a.y * a.y);
-						if(re > 0) return 1;
-                        if(re < 0) return -1;
+						double dista = Math.pow(a.x, 2) + Math.pow(a.y, 2);
+						double distb = Math.pow(b.x, 2) + Math.pow(b.y, 2);		
+						if(dista > distb) return 1;
+                        if(dista < distb) return -1;
                         return 0;
 						}
                     });
