@@ -6,6 +6,14 @@ import java.util.*;
     public double x;
 
     public double y;
+    
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    public String toString() {
+    	return "(" + x + "," + y + ")";
+    }
 
   } 
   
@@ -41,4 +49,15 @@ import java.util.*;
   
 
       }
+  public static void main(String[] args) {
+      Point[] test = new Point[10];
+      for (int i = 0; i < 10; i++) {
+              Random rand = new Random();
+              int x = rand.nextInt(10) + 1;
+              int y = rand.nextInt(10) + 1;
+              test[i] = new Point(x, y);
+      }
+      System.out.println(Arrays.toString(test));
+      System.out.println(Arrays.toString(closestk(test, 5)));
+}
 }
